@@ -24,7 +24,7 @@ jobs:
       run: mvn clean verify -Djarsigner.skip=true
     - name: Upload a Build Artifact
       if: ${{ !cancelled() }}
-    - uses: actions/upload-artifact@v2
+      uses: actions/upload-artifact@v2
       with:
         name: com.espressif.idf.update-*.zip
         path: /home/runner/work/idf-eclipse-plugin/idf-eclipse-plugin/releng/com.espressif.idf.update/target/
